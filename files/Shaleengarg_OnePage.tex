@@ -1,0 +1,394 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage[usenames]{color}
+\usepackage{enumitem}
+\usepackage{nopageno}
+
+\renewcommand{\arraystretch}{1.5}
+\setlist{nolistsep}
+\leftmargin=0.10in %% was .25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.75in
+\textheight=10.50in
+
+\raggedright
+\pagestyle{empty}
+%\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newenvironment{changemargin}[2]{%
+    \begin{list}{}{%
+            \setlength{\topsep}{0pt}%
+            \setlength{\leftmargin}{#1}%
+            \setlength{\rightmargin}{#2}%
+            \setlength{\listparindent}{\parindent}%
+        \setlength{\itemindent}{\parindent}%
+            \setlength{\parsep}{\parskip}%
+        }%
+\item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+    \begin{changemargin}{-0.05in}{-0.10in}
+        \vspace*{-8pt}
+        \hrulefill \\
+        \vspace*{-2pt}
+    \end{changemargin}
+}
+
+\newcommand{\header}[1]{
+    \begin{changemargin}{-0.75in}{-0.75in}
+        \scshape{#1}\\
+        \lineover
+    \end{changemargin}
+}
+
+\newcommand{\name}[1]{
+    \begin{changemargin}{-0.6in}{-0.6in}
+        \begin{center}
+            {\Large \scshape {#1}}
+        \end{center}
+    \end{changemargin}
+}
+
+\newcommand{\contact}[6]{
+    \begin{changemargin}{-0.65in}{-0.65in}
+        \begin{multicols}{2}
+            {#1}\\ \smallskip 
+            {#2}\\ \smallskip
+            {#3}\\ \smallskip
+            {#4}\\ \smallskip 
+            {#5}\\ \smallskip
+            {#6}
+        \end{multicols}
+    \end{changemargin}
+}
+
+\newenvironment{body} {
+    \vspace*{-16pt}
+    \begin{changemargin}{-0.6in}{-0.65in}
+    }     
+    {\end{changemargin}
+}    
+
+\newcommand{\school}[4]{
+    \textbf{#1} \hfill \emph{#2\\}
+    #3\\ 
+    #4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\name{Shaleen Garg}
+
+\contact{Fifth Year Graduate Student}{Computer Science and Engineering}{International Institute of Information Technology, Hyderabad}{\hspace{60pt} \url{http://researchweb.iiit.ac.in/~shaleen.garg}}{\hspace{60pt} \textbf{Email:} shaleen.garg@research.iiit.ac.in}{\hspace{60pt} }%\textbf{Phone No.:} +91-7674977036}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+    \hline     
+    \textbf{Year} & \textbf{Degree} & \textbf{Institute} & \textbf{GPA} \\ \hline
+    2019 (Expected) & CSE Dual Degree & IIIT, Hyderabad & 7.3/10.0 (8 semesters) \\ \hline
+    2014 & AISSE, XII (CBSE) & FAIPS (DPS), Kuwait & 91.2\% \\ \hline
+    2012 & CISCE, X (ICSE) & The Aryan School, Dehradun  & 87\% \\ \hline
+\end{tabular}
+\end{center}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Projects and Works
+\smallskip
+\header{Publications}
+
+\begin{body}
+    \vspace{14pt}
+    \textbf{Share-a-GPU: Providing Simple and Effective Time-Sharing on GPUs}\\
+    \emph{Shaleen Garg, Kishore Kothapalli, Suresh Purini}\\
+    25th IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC), Bengaluru, India, December 17-20, 2018.
+    \smallskip 
+\end{body}
+
+\begin{body}
+    \vspace{14pt}
+    \textbf{GPUScheduler: User Level Preemptive Scheduling for NVIDIA GPUs}\\
+    \emph{Shaleen Garg, Kishore Kothapalli, Suresh Purini}\\
+    24th IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC-SRS10), Jaipur, India, December 18-21, 2017.
+    \smallskip 
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Projects and Works
+\smallskip
+
+\header{Current Research Projects}
+
+% \begin{body}
+%     \vspace{14pt}
+%     \textbf{Expediting Results using Automatic Prioritization of Computations on GPUs} \hfill \emph{Sept'18 - Ongoing}\\
+%     \emph{Dr.Kishore Kothapalli(Associate Prof, IIIT-H), Dr.Suresh Purini(Assistant Prof, IIIT-H) \& Dr.Pawan Kumar(Assistant Prof, IIIT-H)}
+%     \begin{itemize}
+%         %\item{Showing that Dynamically changing the priority of different parts of a kernel on GPU gives a coarse grain result very efficiently}
+%         \item{Automatically changing priorities of different parts of a kernel on GPU to expedite coarse grain results.}
+%         \item{Priorities depend on the rate of change of values in gradient descent/ascent.}
+%         \item{Concurrently calculate the saturation condition on CPU to prioritize kernel without additional overheads on GPU.}
+%     \end{itemize}
+%     \smallskip 
+% \end{body}
+
+\begin{body}
+    \vspace{14pt}
+    \textbf{Optimizing Floating Point Numbers and their Arithmetic for FPGAs} \hfill \emph{August'18 - Ongoing}\\
+    \emph{Dr.Kishore Kothapalli(Associate Prof, IIIT-H) \& Dr.Srikanth Sridharan(Senior Developer, Applied Materials Inc.)}
+    \begin{itemize}
+        \item{Exploring and modifying Unums/Posits for optimizing floating pointing representation.}
+        \item{Trying to come up with alternate ways for representing floating point numbers with efficient arithmetic logic.}
+        \item{Aiming to optimize bit representation, energy impact and implementation area for DSP applications on FPGAs.}
+    \end{itemize}
+    \smallskip 
+\end{body}
+
+\begin{body}
+    \vspace{14pt}
+    \textbf{Reinforcement Learning for Financial Portfolio Management} \hfill \emph{August'18 - Ongoing}\\
+    \emph{Dr.Pawan Kumar(Assistant Prof, IIIT-H)}
+    \begin{itemize}
+        \item{Reducing the portfolio management problem to a typical game(MDP).}
+        \item{Design the agent to predict the price of a commodity after some time using SARSA.}
+        \item{Let the agent master the game on historical trading data by maximizing the portfolio value.}
+        \item{Allow the agent to explore by changing the commodities in the portfolio.}
+    \end{itemize}
+    \smallskip 
+\end{body}
+
+% \begin{body}
+%     \vspace{14pt}
+%     \textbf{Preemptive Scheduling on NVIDIA GPUs} \hfill \emph{September'16 - July'18}\\
+%     \emph{Dr.Kishore Kothapalli(Associate Prof, IIIT-H) \& Dr.Suresh Purini(Assistant Prof, IIIT-H)}
+%     \begin{itemize}
+%         \item{Developed a proof-of-concept scheduler using C and CUDA API which simulates preemptive scheduling and simulates time slicing for general purpose CUDA programs on NVIDIA GPUs.}
+%         \item Used concepts gained in the above scheduler to provide a generic software-level preemptive scheduler for general purpose single-GPU applications.
+%         \item Provided a software memory manager for all the resident programs in order to provide GPU global memory gurantees.
+%         \item Load balancing for multi-GPU setting involving the above concepts.
+%     \end{itemize}
+%     \smallskip 
+% \end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Major Projects and Works
+
+ \header{Major Projects}
+
+ \begin{body}
+     \vspace{14pt}
+%     % \textbf{Optimizing Reinforcement Learning for Financial Portfolio Management} \hfill \emph{August'18 - Ongoing}\\
+%     % \emph{Independent Project: Dr.Pawan Kumar (Assistant Prof, IIIT-H)}
+%     % \begin{itemize}
+%     %     \item{Trying to find the bottlenecks in these kind of workloads and}
+%     %     \item{Optimizing the computations using mathematical tricks from supercomputing such as matrix optimizations}
+%     % \end{itemize}
+%     % \smallskip
+    
+%     % \textbf{Optimizing Floating Point Numbers and their Arithmetic for FPGAs} \hfill \emph{August'18 - Ongoing}\\
+%     % \emph{Dr.Kishore Kothapalli(Associate Prof, IIIT-H) \& Dr.Srikanth Sridharan(Senior Developer, HPC@Applied Materials)}
+%     % \begin{itemize}
+%     %     \item{Exploring Unums/Posits for optimizing floating pointing representation}
+%     %     \item{Trying to come up with alternate ways for representing floating point numbers with efficient arithmetic logic}
+%     %     \item{Aiming to optimize bit representation, energy impact and implementation area for DSP applications on FPGAs}
+%     % \end{itemize}
+%      \smallskip
+
+    \href{https://researchweb.iiit.ac.in/~shaleen.garg/files/Perf_engg_project.pdf}{\textbf{Performance Engineering of Wireless IoT Sensors}} \hfill \emph{November'16 - December'16}\\
+    \emph{Course Project: Dr.Anil Gurijala (Founder CEO of Ashira Labs)}
+    \begin{itemize}
+        \item{Designed a low-cost Wireless IoT Boilerplate hardware platform using readily available 8-Bit micro-controller (arduino micro) and other hardware modules.}
+        \item{The hardware is capable of housing 5-10 sensors (depending on the pins available on the arduino model).}
+        \item{Tested the designed hardware platform to maximize both data transmission frequency and up-time (of the hardware), when connected to a finite remote power source like consumer ``AA'' batteries.}
+        \item{Was successful in keeping the cost of the whole system as low as \$22.}
+    \end{itemize}
+%     \smallskip
+
+%     \href{https://github.com/mayukuse24/HDFS}{\textbf{Distributed Grep}} (Team-Mate \href{https://github.com/mayukuse24}{Mr.Vinaya Khandelwal}) \hfill \emph{October'16 - November'16}\\
+%     \emph{Course Project: Dr.Vivekananda Vellanki(Co-Founder - Stealth Mode Start Company)}\\
+%     \begin{itemize}
+%         \item{Implemented Hardtop Distributed File Systems in Java. Took care of underlying failures associated with this systems.}
+%         \item{Implemented generic Map-Reduce program over the HDFS and tested Distributed Grep on it.}
+%     \end{itemize}
+%     \smallskip
+   
+%     \textbf{Bflat Compiler} \hfill \emph{August'17 - November'17}\\
+%     \emph{Course Project: Dr.Suresh Purini(Assistant Prof, IIIT-H)}
+%     \begin{itemize}
+%         \item{Implemented interpreter for Bflat(self-defined) language using C++.}
+%         \item{Implemented front-end compiler for LLVM Intermediate Representation generation.}
+%         \item{Used Flex(for tokens) and Bison(for grammar).}
+%     \end{itemize}
+%     \smallskip
+
+%     \href{https://researchweb.iiit.ac.in/~shaleen.garg/files/Summer2.pdf}{\textbf{Distributed Graph Algorithms}} \hfill \emph{May'16 - July'16}\\
+%     \emph{Summer Project: Dr.Govindarajulu R(Emeritus Prof, IIIT-H)}
+%     \begin{itemize}
+%         \item {Implemented ``Asynchronous concurrent-initiator depth first search spanning tree'' and ``Synchronous Breadth First Spanning Tree'' in Erlang}
+%         \item {Tested the above algorithms on 5 nodes with graphs of size as large as 1 million vertices.}
+%     \end{itemize}
+%     \smallskip
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Term Projects and Hacks
+% \header{Short Term Projects}
+
+% \begin{body}
+%     \vspace{14pt}
+
+%     % \href{https://github.com/shaleengarg/UltimateTic-Tac-Toe-Bot}{\textbf{Ultimate Tic-Tac-Toe Bot}} \hfill \emph{February'16}\\
+%     % \emph{Course Project: Dr.Praveen Paruchuri (Associate Prof, IIIT-H), Artificial Intelligence}
+%     % \begin{itemize}
+%     %     \item{A python bot to play 9x9 ultimate tic-tac-toe. The bot uses 5 ply deep Alpha-Beta pruning to evaluate the next move based on self developed heuristics to win.}
+%     % \end{itemize}
+%     % \smallskip
+
+%     % \href{https://github.com/shaleengarg/python2Donkeykong}{\textbf{DonkeyKong}} \hfill \emph{September'15}\\
+%     % \emph{Course Project: Dr.Raghu Reddy(Associate Prof, IIIT-H), Structured Systems Analysis and Design (SSAD)}
+%     % \begin{itemize}
+%     %     \item {An ASCII implementation of the classical Donkey Kong game}
+%     %     \item {It showcases and rigorously uses all the concepts of Object Oriented Programming in python}
+%     % \end{itemize}
+%     % \smallskip
+
+%     \href{https://github.com/shaleengarg/C-shell}{\textbf{C-Shell}} \hfill \emph{October'15}\\
+%     \emph{Course Project: Dr.Suresh Purini(Assistant Prof, IIIT-H), Operating Systems}
+%     \begin{itemize}
+%         \item {A C implementation of the shell using commands like execvp, fork, signal et cetera}
+%         \item {The shell has capabilities like piping, redirection and multiple commands}
+%     \end{itemize}
+%     \smallskip
+
+
+%     % \href{https://youtu.be/_XdZ6j8wHjg}{\textbf{Phone Wars}} (Team-Mates \href{https://github.com/Punyaslok}{Mr.Punyaslok Pattnaik} and Mr.Aagam Shah) \hfill \emph{April'16}\\
+%     % \emph{Course Project: Dr.PJ Narayanan(Professor \& Director, IIIT-H), Graphics}
+%     % \begin{itemize}
+%     %     \item {Produced an animated movie to showcase all the different concepts acquired in the course including camera positions, lighting et cetera.}
+%     % \end{itemize}
+%     % \smallskip
+
+%     % \href{https://researchweb.iiit.ac.in/~shaleen.garg/Carrom/}{\textbf{Online Carrom Game}} \hfill \emph{March'16}\\
+%     % \emph{Course Project: Dr.PJ Narayanan(Professor \& Director, IIIT-H), Graphics}
+%     % \begin{itemize}
+%     %     \item {Made an online carrom game using three.js and WebGL implementing collisions and different camera angles.}
+%     % \end{itemize}
+%     % \smallskip
+
+%     % \href{https://github.com/shaleengarg/2Dgame_opengl}{\textbf{2D Maze Game}} \hfill \emph{March'16}\\
+%     % \emph{Course Project: Dr.PJ Narayanan(Professor \& Director, IIIT-H), Graphics}
+%     % \begin{itemize}
+%     %     \item {A 3D computer game programmed using OpenGL C++ API\@. The game uses a self-developed physics engine.}
+%     % \end{itemize}
+%     % \smallskip
+
+%     \href{https://youtu.be/MS8gUX3UMek}{\textbf{NetZero Energy House for Hyderabad}} \hfill \emph{April'16}\\
+%     \emph{Course Project: Dr. K.S. Rajan(Associate Prof, IIIT-H), Engineering Systems}
+%     \begin{itemize}
+%         \item{Served as a \textbf{subgroup leader} in a 5 member sub-team to design the Envelope of the system}
+%         \item{Worked with a 25 member team to propose a fully functional NetZero Energy residential house for Hyderabad, India}
+%     \end{itemize}
+%     \smallskip
+
+%     % \href{https://github.com/shaleengarg/P2Pfileshare}{\textbf{P2P File-share}} \hfill \emph{March'16}\\
+%     % \emph{Course Project: Dr. Ganesh Iyer(Visiting Faculty, IIIT-H), Computer Networks}
+%     % \begin{itemize}
+%     %     \item {File transfer between two clients with TCP and UDP sockets in python.}
+%     %     \item {Supports file upload/download with MD5sum checks and indexed searching.}
+%     %     \item {It periodically checks for any changes made to the shared folders}
+%     % \end{itemize}
+%     % \smallskip
+
+%     % \href{https://github.com/shaleengarg/UDP_Pinger}{\textbf{UDP Pinger}} \hfill \emph{April'16}\\
+%     % \emph{Course Project: Dr. Ganesh Iyer(Visiting Faculty, IIIT-H), Computer Networks}
+%     % \begin{itemize}
+%     %     \item {Works as an alternative to the standard ICMP ping.}
+%     %     \item {Reports Min, Max and Average Round Trip Time and calculates percentage Packet Loss}
+%     % \end{itemize}
+%     % \smallskip
+
+%     % \textbf{Image Compression} \hfill \emph{March'16}\\
+%     % \emph{Course Project: Dr.Vineet Gandhi(Senior Research Scientist, IIIT-H), Digital Signal Analysis}
+%     % \begin{itemize}
+%     %     \item {Implemented image compression using discrete cosine transform and quantization on Matlab}
+%     % \end{itemize}
+%     % \smallskip
+% \end{body}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relevant Courses
+% \smallskip
+% \header{Relevant Courses} % (* Pursuing in Monsoon'17)}
+
+% \begin{body}
+%     \vspace{4pt}
+%     \begin{multicols}{3}
+%         Data Structures and Algorithms\\ 
+%         Operating Systems\\
+%         Formal Methods\\
+%         %Digital Signal Analysis\\
+%         Complexity and Advanced Algorithms\\
+%         Distributed Systems\\
+%         Statistical Methods in AI\\
+%         Systems and Network Security\\
+%         Parallel and Scientific Computing\\
+%         Compilers\\
+%         %Principles Of Programming- -Languages\\
+%         %Advanced Computer Networks\\
+%     \end{multicols}
+
+% \end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\smallskip
+\header{Computer Skills}
+
+\begin{body}
+    \vspace{14pt}
+    \emph{\textbf{Languages:}}{} C, C++, CUDA, Java\\
+    \emph{\textbf{Scripting Languages:}}{} Python, Bash\\
+    \emph{\textbf{Other Tools/Languages:}}{} \LaTeX\\
+    \emph{\textbf{Platforms:}}{} Linux\\
+    \emph{\textbf{Hardware:}}{} Arduino, ESP8266(wifi module)
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other Achievements
+\smallskip
+\header{Positions and Community Service}
+
+\begin{body}
+    \vspace{14pt}
+    \begin{itemize}
+        \item{Election Commissioner \& Member of the \textbf{Students Parliament} for academic year 2018-19, IIIT}
+        \item{\textbf{Research Assistant} for Dr. Kishore Kothapalli, academic year 2018-19, CSTAR, IIIT}
+        \item{\textbf{Teaching Assistant} for Distributed Systems(CSE431), Monsoon 2017 \& Spring 2018, IIIT}
+        \item{\textbf{Server Administrator} at Center for Security, Theory and Algorithmic Research (CSTAR), IIIT}
+        \item{\textbf{Volunteer} to give weekly science lessons to the local underprivileged children at Ashakiran(Ray of Hope), IIIT}
+        \item{Runners-Up in Mens Doubles \textbf{Table-Tennis} tournament in the annual sports meet 2016, IIIT}
+        \item{Second Runners-Up in Mens Singles \textbf{Table-Tennis} tournament in the annual sports meet 2016, IIIT}
+        % \item{Second Runners-Up in under-18 Mens Singles \textbf{Table-Tennis} in the annual sports meet at St. George's College, Mussoorie}
+    \end{itemize}
+\end{body}
+
+\end{document}
